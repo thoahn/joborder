@@ -12,6 +12,7 @@ namespace JobOrder.DataAccess
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("joborderDb"));
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<ILagRepository, LagRepository>();
         }
     }
 }

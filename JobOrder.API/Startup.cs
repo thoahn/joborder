@@ -1,3 +1,4 @@
+using JobOrder.Application;
 using JobOrder.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -20,6 +21,7 @@ namespace JobOrder.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDataAccessLayerRegistration();
+            services.AddApplicationLayerRegistration();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
