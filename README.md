@@ -1,1 +1,4 @@
-# joborder
+- Projede bin/obj/etc.. klasörleri temizlenmiştir, o nedenle öncelikle solution build edilmelidir.
+- Öncelikle API layer ayağa kaldırılmalıdır. 
+- Presentation layer Windows forms ile yazılmıştır. API ayağa kalktıktan sonra exe dosyası çalıştırılması yeterlidir.
+- http://localhost:45567/swagger/index.html url ile API dokümanyasyonuna ulaşılabilir, ve execute edilebilir.
