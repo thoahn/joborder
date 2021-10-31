@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using JobOrder.Application.Dtos;
+using JobOrder.Application.Features.Commands.CreateLag;
+using JobOrder.Application.Features.Commands.CreateOrder;
 using JobOrder.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JobOrder.Application.Mapping
 {
@@ -16,6 +13,10 @@ namespace JobOrder.Application.Mapping
             CreateMap<Order, OrderViewDto>().ReverseMap();
 
             CreateMap<Lag, LagViewDto>().ReverseMap();
+
+            CreateMap<Order, CreateOrderCommand>().ReverseMap();
+
+            CreateMap<Lag, CreateLagCommand>().ReverseMap();
         }
     }
 }

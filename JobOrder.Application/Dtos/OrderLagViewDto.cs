@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace JobOrder.Application.Dtos
 {
-    public class LagViewDto
+    public class OrderLagViewDto
     {
-        public int Id { get; set; }
+        public string OrderName { get; set; }
         public string LagReason { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public double LagDuration { get; set; }
     }
 }

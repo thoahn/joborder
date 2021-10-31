@@ -10,7 +10,7 @@ namespace JobOrder.DataAccess
     {
         public static void AddDataAccessLayerRegistration(this IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("joborderDb"));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("joborderDb"), ServiceLifetime.Singleton, ServiceLifetime.Singleton);
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ILagRepository, LagRepository>();
         }

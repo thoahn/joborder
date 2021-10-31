@@ -1,4 +1,6 @@
-﻿using JobOrder.Application.Features.Queries.GetAllOrders;
+﻿using JobOrder.Application.Features.Commands.CreateOrder;
+using JobOrder.Application.Features.Queries.GetAllOrders;
+using JobOrder.Application.Features.Queries.GetOrderById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -24,6 +26,21 @@ namespace JobOrder.API.Controllers
         {
             var query = new GetAllOrdersQuery();
             return Ok(await mediator.Send(query));
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var query = new GetOrderByIdQuery() { Id = id };
+            return Ok(await mediator.Send(query));
+        }
+
+        [HttpPost]
+        [Route("add")]
+        public async Task<IActionResult> Add(CreateOrderCommand command)
+        {
+            return Ok(await mediator.Send(command));
         }
     }
 }

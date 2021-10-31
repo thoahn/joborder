@@ -15,9 +15,4 @@
     <ProjectReference Include="..\JobOrder.Core\JobOrder.Core\JobOrder.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Commands\CreateLag\" />
-    <Folder Include="Features\Commands\CreateOrder\" />
-  </ItemGroup>
-
 </Project>
